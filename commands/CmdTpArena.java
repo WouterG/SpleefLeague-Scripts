@@ -40,8 +40,10 @@ public class CmdTpArena implements DynamicCommand {
             sj_a.forEach((a) -> sj_names.add(a.getName()));
             p.sendMessage(ChatColor.RED + "SuperSpleef Arena's:");
             p.sendMessage(ChatColor.GOLD + StringUtils.join(ss_names, ChatColor.YELLOW + ", " + ChatColor.GOLD) + ChatColor.YELLOW + ".");
+            p.sendMessage(ChatColor.YELLOW + "/tparena ss <name>");
             p.sendMessage(ChatColor.RED + "SuperJump Arena's:");
             p.sendMessage(ChatColor.GOLD + StringUtils.join(sj_names, ChatColor.YELLOW + ", " + ChatColor.GOLD) + ChatColor.YELLOW + ".");
+            p.sendMessage(ChatColor.YELLOW + "/tparena sj <name>");
             return;
         }
         if (args[0].equalsIgnoreCase("ss")) {
