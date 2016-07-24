@@ -26,7 +26,7 @@ public class CmdTpArena implements DynamicCommand {
 
     @Override
     public Rank getRequiredRank() {
-        return Rank.SENIOR_MODERATOR;
+        return Rank.MODERATOR;
     }
 
     @Override
@@ -65,7 +65,9 @@ public class CmdTpArena implements DynamicCommand {
                 return;
             }
             if (a.getSpectatorSpawn() == null) {
-                p.sendMessage(ChatColor.RED + "No spectator spawn is set on " + ChatColor.YELLOW + a.getName());
+                p.sendMessage(ChatColor.GOLD + "No spectator spawn is set on " + ChatColor.YELLOW + a.getName());
+                p.sendMessage(ChatColor.GOLD + "Teleporting to spawn of player #1");
+                p.teleport(a.getSpawns()[0]);
                 return;
             }
             p.sendMessage(ChatColor.GREEN + "Whoosh!");
